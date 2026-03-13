@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Greeting Section -->
+        <section class="greeting-section">
+            <h1 id="greeting">Good Morning</h1>
+            <p id="datetime"></p>
+        </section>
+
+        <!-- Grid Container for smaller boxes -->
+        <div class="grid-container">
+            <!-- Focus Timer Section -->
+            <section class="timer-section box">
+                <h2>Focus Timer</h2>
+                <div class="timer-input-group">
+                    <input type="number" id="timer-minutes" min="1" max="120" value="25" placeholder="Minutes">
+                    <button id="set-timer-btn">Set</button>
+                </div>
+                <div id="timer-display">25:00</div>
+                <div class="timer-controls">
+                    <button id="start-btn">Start</button>
+                    <button id="stop-btn">Stop</button>
+                    <button id="reset-btn">Reset</button>
+                </div>
+            </section>
+
+            <!-- To-Do List Section -->
+            <section class="todo-section box">
+                <h2>To-Do List</h2>
+                <div class="todo-input">
+                    <input type="text" id="task-input" placeholder="Add a new task...">
+                    <button id="add-task-btn">Add</button>
+                </div>
+                <div class="sort-controls">
+                    <button class="sort-btn" id="sort-az">Sort A-Z</button>
+                    <button class="sort-btn" id="sort-za">Sort Z-A</button>
+                    <button class="sort-btn" id="sort-date">Sort by Date</button>
+                </div>
+                <ul id="task-list"></ul>
+            </section>
+
+            <!-- Quick Links Section -->
+            <section class="links-section box">
+                <h2>Quick Links</h2>
+                <div class="link-input">
+                    <input type="text" id="link-name" placeholder="Link name">
+                    <input type="url" id="link-url" placeholder="https://example.com">
+                    <button id="add-link-btn">Add Link</button>
+                </div>
+                <div id="links-container"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

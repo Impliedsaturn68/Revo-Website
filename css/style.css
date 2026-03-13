@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a0033 0%, #000000 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.box {
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+.box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #bb86fc;
+}
+
+.greeting-section {
+    text-align: center;
+}
+
+.greeting-section h1 {
+    font-size: 3rem;
+    color: #bb86fc;
+}
+
+.greeting-section p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+.timer-section {
+    text-align: center;
+}
+
+.timer-input-group {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#timer-minutes {
+    width: 100px;
+    padding: 8px;
+    border: 2px solid #4a4a4a;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+#timer-minutes:focus {
+    outline: none;
+    border-color: #bb86fc;
+}
+
+#set-timer-btn {
+    background: #bb86fc;
+    color: #000;
+    font-weight: 600;
+    padding: 8px 16px;
+}
+
+#timer-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #bb86fc;
+    margin: 15px 0;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#start-btn {
+    background: #4caf50;
+    color: white;
+}
+
+#stop-btn {
+    background: #f44336;
+    color: white;
+}
+
+#reset-btn {
+    background: #ff9800;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.todo-input, .link-input {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+input[type="text"], input[type="url"] {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    border: 2px solid #4a4a4a;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: #1a1a2e;
+    color: #e0e0e0;
+}
+
+input:focus {
+    outline: none;
+    border-color: #bb86fc;
+}
+
+#add-task-btn, #add-link-btn {
+    background: #bb86fc;
+    color: #000;
+    font-weight: 600;
+}
+
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #1a1a2e;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #4a4a4a;
+    font-size: 0.9rem;
+}
+
+.task-item.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    cursor: pointer;
+}
+
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.edit-btn {
+    background: #2196f3;
+    color: white;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: white;
+}
+
+#links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+}
+
+.link-btn {
+    padding: 12px 8px;
+    background: #bb86fc;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    display: block;
+    position: relative;
+    font-size: 0.85rem;
+}
+
+.link-btn:hover {
+    background: #9d6fd8;
+}
+
+.sort-controls {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.sort-btn {
+    background: #6200ea;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+.delete-link {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+}
